@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { Typography } from "@mui/material";
+import moment from "moment";
 
 const Weather = ({ weatherData }) => {
   return (
@@ -12,7 +13,9 @@ const Weather = ({ weatherData }) => {
           <Typography variant="h5" component="div">
             {weatherData.name}
           </Typography>
-          <Typography>평균 온도: {weatherData.main.temp}°C</Typography>
+          <Typography variant="h3">
+            {Math.round(weatherData.main.temp)}°C
+          </Typography>
           <Typography>
             일출:{" "}
             {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString(
@@ -25,7 +28,10 @@ const Weather = ({ weatherData }) => {
               "ko-KR"
             )}
           </Typography>
-          <Typography>{weatherData.weather[0].description}</Typography>
+          <Typography>{weatherData.weather[0].main}</Typography>
+          <p>습도: {weatherData.main.humidity} %</p>
+          <p>요일: {moment().format("dddd")}</p>
+          <p>날짜: {moment().format("LL")}</p>
         </CardContent>
       </Card>
     </Box>
