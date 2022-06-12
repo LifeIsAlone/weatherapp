@@ -28,7 +28,6 @@ export default function App() {
 
   return (
     <div className="App">
-      {/* fetch 데이터가 비동기 함수라서 검사하는 게 필수다 */}
       {typeof data.main != "undefined" ? (
         <Weather weatherData={data} />
       ) : (
