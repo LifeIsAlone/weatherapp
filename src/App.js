@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import Weather from "./components/Weather";
+
 export default function App() {
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
@@ -27,6 +28,7 @@ export default function App() {
 
   return (
     <div className="App">
+      {/* fetch 데이터가 비동기 함수라서 검사하는 게 필수다 */}
       {typeof data.main != "undefined" ? (
         <Weather weatherData={data} />
       ) : (
