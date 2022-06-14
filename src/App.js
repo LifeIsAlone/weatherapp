@@ -1,40 +1,13 @@
-import "./App.css";
-import React, { useEffect, useState } from "react";
-import Weather from "./components/Weather";
-import dotenv from "dotenv";
-dotenv.config();
+import React from "react";
+import Dashboard from "./components/Dashboard";
 
 export default function App() {
-  const [lat, setLat] = useState([]);
-  const [long, setLong] = useState([]);
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      navigator.geolocation.getCurrentPosition(function (position) {
-        setLat(position.coords.latitude);
-        setLong(position.coords.longitude);
-      });
-
-      await fetch(
-        `${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
-      )
-        .then((res) => res.json())
-        .then((result) => {
-          setData(result);
-          console.log(result);
-        });
-    };
-    fetchData();
-  }, [lat, long]);
-
+  if (process.env.REACT_APP_API_KEY === undefined) {
+    return <h4>Please add .env and add follow REACT_APP_API_KEY</h4>;
+  }
   return (
     <div className="App">
-      {typeof data.main != "undefined" ? (
-        <Weather weatherData={data} />
-      ) : (
-        <div></div>
-      )}
+      <Dashboard />
     </div>
   );
 }
