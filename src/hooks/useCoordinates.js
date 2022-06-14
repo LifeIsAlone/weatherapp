@@ -15,8 +15,8 @@ export const useCoordinations = () => {
           setLong(position.coords.longitude);
         },
         (positionError) => {
-          setLat("41.390205");
-          setLong("2.154007");
+          setLat("37.5666805");
+          setLong("126.9784147");
           console.log(positionError);
         }
       );
@@ -29,7 +29,6 @@ export const useCoordinations = () => {
   const updateLocation = (lat, long) => {
     setLat(lat);
     setLong(long);
-    //console.log('Updated Location')
   };
 
   return [{ lat, long }, loadingLocation, findCoordinates, updateLocation];
