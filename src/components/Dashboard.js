@@ -72,6 +72,7 @@ const Dashboard = () => {
   }
   return (
     <ThemeProvider theme={nightMode ? themeDark : themeLight}>
+      <StyledGlobal />
       <div>
         <Sidebar
           findCoordinates={fetchCoordinates}
@@ -104,7 +105,6 @@ const Dashboard = () => {
             </>
           )}
         </Container>
-        <StyledGlobal />
       </div>
     </ThemeProvider>
   );
