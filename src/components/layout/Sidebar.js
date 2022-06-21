@@ -4,6 +4,7 @@ import LocationBox from "../elements/LocationBox";
 import WeatherIcon from "../elements/WeatherIcon";
 import WeatherInfo from "../elements/WeatherInfo";
 import { countries } from "country-data";
+import StyledSidebar from "../../styles/StyledSidebar";
 
 const Sidebar = ({
   findCoordinates,
@@ -15,7 +16,7 @@ const Sidebar = ({
   unitTemp,
 }) => {
   return (
-    <div>
+    <StyledSidebar>
       <SearchBar
         findCoordinates={findCoordinates}
         searchCallback={searchCallback}
@@ -31,7 +32,7 @@ const Sidebar = ({
           }
         />
       )}
-    </div>
+    </StyledSidebar>
   );
 };
 
