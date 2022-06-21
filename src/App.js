@@ -3,7 +3,7 @@ import Dashboard from "./components/Dashboard";
 
 export default function App() {
   if (
-    process.env.REACT_APP_API_KEY === undefined ||
+    process.env.REACT_APP_API_KEY_APPID === undefined ||
     process.env.REACT_APP_API_KEY_UNSPLASH === undefined
   ) {
     return (

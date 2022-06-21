@@ -8,7 +8,7 @@ import Week from "./layout/Week";
 import Header from "./layout/Header";
 import Spinner from "./elements/Spinner";
 import SpinnerContainer from "./elements/SpinnerContainer";
-import { StyledGlobal } from "../styles";
+import StyledGlobal from "../styles/StyledGlobal";
 import { themeLight, themeDark } from "../constants";
 import { useImageFetch } from "../hooks/useImageFetch";
 import { useNightMode } from "../hooks/useNightMode";
