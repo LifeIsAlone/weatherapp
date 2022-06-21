@@ -8,7 +8,7 @@ import Week from "./layout/Week";
 import Header from "./layout/Header";
 import Spinner from "./elements/Spinner";
 import SpinnerContainer from "./elements/SpinnerContainer";
-import { StyledGlobal, StyledDashboard } from "../styles";
+import { StyledGlobal } from "../styles";
 import { themeLight, themeDark } from "../constants";
 import { useImageFetch } from "../hooks/useImageFetch";
 import { useNightMode } from "../hooks/useNightMode";
@@ -72,7 +72,7 @@ const Dashboard = () => {
   }
   return (
     <ThemeProvider theme={nightMode ? themeDark : themeLight}>
-      <StyledDashboard>
+      <div>
         <Sidebar
           findCoordinates={fetchCoordinates}
           data={weather}
@@ -105,7 +105,7 @@ const Dashboard = () => {
           )}
         </Container>
         <StyledGlobal />
-      </StyledDashboard>
+      </div>
     </ThemeProvider>
   );
 };
