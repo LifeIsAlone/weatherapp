@@ -21,17 +21,13 @@ const Header = ({
       <div className="today-week">
         <span
           className={`today ${showActive ? "active" : ""}`}
-          onClick={() => {
-            enableToday(true);
-          }}
+          onClick={() => enableToday(true)}
         >
           오늘 날씨
         </span>
         <span
-          className={`week ${showActive ? "" : "active"}`}
-          onClick={() => {
-            enableToday(false);
-          }}
+          className={`week  ${showActive ? "" : "active"}`}
+          onClick={() => enableToday(false)}
         >
           주간 날씨
         </span>
@@ -58,7 +54,7 @@ const Header = ({
           checked={nightMode}
           onChange={nightModeCallback}
         />
-        <label htmlFor="chk" className="label">
+        <label className="label" htmlFor="chk">
           <div className="sun">
             <IoIosSunny size={15} />
           </div>
