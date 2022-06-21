@@ -1,6 +1,7 @@
 import React from "react";
 import { IoIosSunny } from "react-icons/io";
 import { RiMoonClearFill } from "react-icons/ri";
+import StyledHeader from "../../styles/StyledHeader";
 
 const Header = ({
   unitMode,
@@ -17,7 +18,7 @@ const Header = ({
     unitTempCallback(enabled);
   };
   return (
-    <div>
+    <StyledHeader>
       <div className="today-week">
         <span
           className={`today ${showActive ? "active" : ""}`}
@@ -64,7 +65,7 @@ const Header = ({
           <div className="ball"></div>
         </label>
       </div>
-    </div>
+    </StyledHeader>
   );
 };
 
