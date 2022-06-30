@@ -8,7 +8,7 @@ export const useImageFetch = () => {
       const response = await fetch(endpoint);
       const result = await response.json();
       //사진 사이즈
-      setImage(result.results[Math.floor(Math.random() * 10)].urls.regular);
+      setImage(result.results[0].urls.regular);
     } catch (error) {
       console.log(error);
     }
