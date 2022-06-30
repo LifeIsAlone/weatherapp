@@ -33,7 +33,7 @@ const Highlights = ({ data }) => {
                   </span>
                 </div>
                 <div className="info-text">
-                  <span>{data.wind_speed} </span> <span>km/s</span>
+                  <span>{data.wind_speed}km/s</span>
                 </div>
               </div>
             </div>
@@ -67,8 +67,7 @@ const Highlights = ({ data }) => {
                   <WiHumidity />
                 </span>
                 <span className="info-text">
-                  <span>{data.humidity}</span>
-                  <span>%</span>
+                  <span>{data.humidity}%</span>
                 </span>
               </div>
             </div>
@@ -79,8 +78,7 @@ const Highlights = ({ data }) => {
                   <WiBarometer />
                 </span>
                 <span className="info-text">
-                  <span>{data.pressure}</span>
-                  <span>hPa</span>
+                  <span>{data.pressure}hpa</span>
                 </span>
               </div>
             </div>
@@ -91,8 +89,7 @@ const Highlights = ({ data }) => {
                   <MdVisibility />
                 </span>
                 <span className="info-text">
-                  <span>{(data.visibility / 1000).toFixed(1)}</span>
-                  <span>km</span>
+                  <span>{(data.visibility / 1000).toFixed(1)}km</span>
                 </span>
               </div>
             </div>
