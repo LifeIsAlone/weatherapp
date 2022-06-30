@@ -108,7 +108,7 @@ const StyledHighlights = styled.div`
       height: 30px;
       padding: 2px;
       color: #fff;
-      border-radius: 50px;
+      border-radius: 50%;
       font-size: 21px;
     }
     .icon-v {
@@ -160,6 +160,8 @@ const StyledHighlights = styled.div`
   }
   .flex-box {
     margin-top: 25px;
+    display: flex;
+    align-items: center;
   }
 `;
 

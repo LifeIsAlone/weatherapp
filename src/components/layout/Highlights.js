@@ -17,23 +17,23 @@ const Highlights = ({ data }) => {
               <span className="type-info">자외선 세기</span>
               <div className="flex-box">
                 <span className="result-uv">
-                  <span>
-                    <GiSunRadiations />
-                  </span>
+                  <GiSunRadiations />
                 </span>
-                <span className="info-text">{Math.round(data.uvi)}</span>
+                <span className="info-text">
+                  <span>{Math.round(data.uvi)}</span>
+                </span>
               </div>
             </div>
             <div className="box_info">
               <span className="type-info">풍속</span>
-              <div className="info-text">
-                <span>{data.wind_speed} </span> km/s
-              </div>
-              <div className="ssw">
+              <div className="flex-box">
                 <div className="icon-ssw">
                   <span>
                     <FaMapMarkerAlt />
                   </span>
+                </div>
+                <div className="info-text">
+                  <span>{data.wind_speed} </span> <span>km/s</span>
                 </div>
               </div>
             </div>
@@ -67,7 +67,8 @@ const Highlights = ({ data }) => {
                   <WiHumidity />
                 </span>
                 <span className="info-text">
-                  <span>{data.humidity}</span>%
+                  <span>{data.humidity}</span>
+                  <span>%</span>
                 </span>
               </div>
             </div>
@@ -78,7 +79,8 @@ const Highlights = ({ data }) => {
                   <WiBarometer />
                 </span>
                 <span className="info-text">
-                  <span>{data.pressure}</span>hPa
+                  <span>{data.pressure}</span>
+                  <span>hPa</span>
                 </span>
               </div>
             </div>
@@ -89,7 +91,8 @@ const Highlights = ({ data }) => {
                   <MdVisibility />
                 </span>
                 <span className="info-text">
-                  <span>{(data.visibility / 1000).toFixed(1)}</span>km
+                  <span>{(data.visibility / 1000).toFixed(1)}</span>
+                  <span>km</span>
                 </span>
               </div>
             </div>
