@@ -1,8 +1,8 @@
 import React from "react";
 import { convertF, convertC } from "../../usefulFunction";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import StyledToday from "../../styles/StyledToday";
+import "swiper/css";
 
 const Today = ({ tempUnit, data }) => {
   return (
