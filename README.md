@@ -1,8 +1,8 @@
-# 🌦 Open API를 이용해 만든 날씨 앱
+# 🌦 Open API를 이용해 만든 날씨 웹사이트
 
-## 🚩 [page] (https://lifeisalone.github.io/weatherapp/)
+## 🚩Page
 
-Open API를 이용해서 React 웹사이트 구현
+https://lifeisalone.github.io/weatherapp/
 
 ## Open API
 
